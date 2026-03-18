@@ -69,7 +69,7 @@ body {
   content: "";
   width: 0%;
   height: 2px;
-  background: #00f5ff;
+  background: #894a9f;
   position: absolute;
   left: 0;
   bottom: -5px;
@@ -82,7 +82,7 @@ body {
 
 /* Active link */
 .active-link {
-  color: #00f5ff;
+  color: #894a9f;
   font-weight: bold;
 }
 
@@ -104,7 +104,7 @@ body {
 .section,
 .hero {
   min-height: 100vh;
-  padding: 80px 0;
+  padding: 0px 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -193,7 +193,7 @@ section {
 
 .project-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 20px 40px rgba(212, 0, 255, 0.227);
 }
 
 /* ================= CONTACT ================= */
@@ -227,14 +227,14 @@ section {
 .contact-form input:focus,
 .contact-form textarea:focus {
   background: rgba(255, 255, 255, 0.2);
-  box-shadow: 0 0 0 3px rgba(0, 245, 255, 0.3);
+  box-shadow: 0 0 0 3px rgba(212, 0, 255, 0.227);
 }
 
 .contact-form button {
   padding: 12px;
   border-radius: 25px;
   border: none;
-  background: #00f5ff;
+  background: #894a9f;
   color: #111;
   cursor: pointer;
   font-weight: bold;
@@ -244,7 +244,7 @@ section {
 
 .contact-form button:hover {
   transform: scale(1.05) translateY(-2px);
-  box-shadow: 0 10px 20px rgba(0, 247, 255, 0.227);
+  box-shadow: 0 10px 20px rgba(212, 0, 255, 0.227);
 }
 
 /* ================= FOOTER ================= */
