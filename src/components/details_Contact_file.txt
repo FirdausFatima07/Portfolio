@@ -1,0 +1,124 @@
+Line-by-Line Explanation
+🔹 import { useState } from "react";
+
+=> We are importing the useState Hook from React.
+=> useState is used to store and manage data inside the component.
+
+🔹 function Contact() {
+
+=> This is a React functional component.
+=> It represents the Contact section of your portfolio.
+
+🔹 const [formData, setFormData] = useState({...})
+
+=> We are creating state.
+
+formData → stores form values
+
+setFormData → function to update values
+
+useState({...}) → initial values (empty strings)
+
+Initial state:
+
+{
+  name: "",
+  email: "",
+  message: ""
+}
+🔹 const handleChange = (e) => {
+
+=> This function runs when user types in input fields.
+
+e = event object
+It contains information about the input field.
+
+🔹 Inside handleChange:
+setFormData({
+  ...formData,
+  [e.target.name]: e.target.value
+});
+
+Let’s break this:
+
+🔸 ...formData
+
+Copies old data (spread operator)
+
+🔸 [e.target.name]
+
+Gets input name dynamically
+Example:
+
+If typing in name field → name
+
+If typing in email field → email
+
+🔸 e.target.value
+
+Gets the typed value
+
+So basically:
+
+=> Update only the field that user is typing in
+=> Keep other fields unchanged
+
+🔹 const handleSubmit = (e) => {
+
+=> This function runs when user clicks "Send".
+
+🔹 e.preventDefault();
+
+=> Prevents page reload
+Normally form reloads page after submit
+We stop that behavior.
+
+🔹 alert("Message received successfully! ✅");
+
+-> Shows success popup message.
+
+🔹 Reset form
+setFormData({
+  name: "",
+  email: "",
+  message: ""
+});
+
+-> Clears input fields after submit.
+
+🔹 JSX Return Part
+🔸 <section id="contact" className="section">
+
+Creates a section with ID = contact
+Used for navbar scrolling.
+
+🔸 <form onSubmit={handleSubmit}>
+
+When form is submitted → handleSubmit() runs.
+
+🔸 <input type="text" name="name" ... />
+
+Important parts:
+
+name="name" → connects to state key
+
+value={formData.name} → controlled input
+
+onChange={handleChange} → updates state
+
+required → field must be filled
+
+This is called a controlled component.
+
+🔸 Same logic for:
+
+Email input
+
+Message textarea
+
+All connected to state.
+
+🔸 <button type="submit">
+
+When clicked → triggers form submit
+→ Calls handleSubmit
